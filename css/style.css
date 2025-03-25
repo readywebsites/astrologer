@@ -946,10 +946,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     -ms-box-shadow: -1px 0px 1px 0px #e1e1e1;
     box-shadow: -1px 0px 1px 0px #e1e1e1;
 }
-.ast_whywe_info_box span img{
-	display:inline-block;
-    width: 48px;
-}
+
 .ast_whywe_info_box_info{
     position: absolute;
     top: 20px;
@@ -1218,7 +1215,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-	 background-image: url(https://dummyimage.com/1920x700);
+	 background-image: url(../images/content/about-2nd-banner.png);
     background-position: center center;
 	 background-repeat: no-repeat;
      z-index: 1;

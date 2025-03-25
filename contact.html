@@ -157,33 +157,40 @@ Purchase: http://themeforest.net/user/kamleshyadav
 					</ul><!---->
 					<div id="login-dialog" class="zoom-anim-dialog mfp-hide">
 						<h1>Login Form</h1>
-						<form>
-							<input type="text" placeholder="Email">
-							<input type="password" placeholder="Password">
+						<form id="login-form">
+							<input type="text" id="login-email" placeholder="Email" required>
+							<input type="password" id="login-password" placeholder="Password" required>
 							<div class="ast_login_data">
-								<label class="tp_custom_check" for="remember_me">Remember me <input type="checkbox" name="ast_remember_me" value="yes" id="ast_remember_me"><span class="checkmark"></span>
+								<label class="tp_custom_check">
+									Remember me <input type="checkbox" id="remember_me">
+									<span class="checkmark"></span>
 								</label>
-								<a href="#">Forgot password ?</a>
+								<a href="#">Forgot password?</a>
 							</div>
 							<button type="submit" class="ast_btn">Login</button>
-							<p>Create An Account ? <a href="#">SignUp</a></p>
+							<p>Create an account? <a href="#">SignUp</a></p>
 						</form>
 					</div>
+					
 					<div id="signup-dialog" class="zoom-anim-dialog mfp-hide">
-						<h1>signup form</h1>
-						<form>
-							<input type="text" placeholder="Name">
-							<input type="text" placeholder="Email">
-							<input type="password" placeholder="Password">
-							<input type="text" placeholder="Mobile Number">
-							<select>
+						<h1>Signup Form</h1>
+						<form id="signup-form">
+							<input type="text" id="signup-name" placeholder="Name" required>
+							<input type="text" id="signup-email" placeholder="Email" required>
+							<input type="password" id="signup-password" placeholder="Password" required>
+							<input type="text" id="signup-mobile" placeholder="Mobile Number" required>
+							<select id="signup-gender">
 								<option value="male">Male</option>
 								<option value="female">Female</option>
 							</select>
-							<button type="submit" class="ast_btn">submit</button>
-							<p>Have An Account ? <a href="#">Login</a></p>
+							<button type="submit" class="ast_btn">Submit</button>
+							<p>Have an account? <a href="#">Login</a></p>
 						</form>
 					</div>
+					
+					<!-- Logout Button -->
+					<button id="logout-btn" style="display: none;" class="ast_btn">Logout</button>
+					
 				</div>
 			</div>
 		</div>
@@ -556,7 +563,43 @@ Purchase: http://themeforest.net/user/kamleshyadav
 });
 
 </script>
+<script>
+	const scriptURL = "https://script.google.com/macros/s/AKfycbyo_QrfI3KI_GD6hVE33ZbpHV1AmHxGrFXpEU8IDn4TBvLgyVi75XeNXzEcKCM46A6N/exec";
 
+// Signup Form Submission
+document.getElementById("signup-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let formData = new URLSearchParams();
+    formData.append("action", "signup");
+    formData.append("name", document.getElementById("signup-name").value);
+    formData.append("email", document.getElementById("signup-email").value);
+    formData.append("password", document.getElementById("signup-password").value);
+    formData.append("mobile", document.getElementById("signup-mobile").value);
+    formData.append("gender", document.getElementById("signup-gender").value);
+
+    fetch(scriptURL, { method: "POST", body: formData })
+    .then(response => response.json())
+    .then(data => alert(data.message))
+    .catch(error => console.error("Error:", error));
+});
+
+// Login Form Submission
+document.getElementById("login-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let formData = new URLSearchParams();
+    formData.append("action", "login");
+    formData.append("email", document.getElementById("login-email").value);
+    formData.append("password", document.getElementById("login-password").value);
+
+    fetch(scriptURL, { method: "POST", body: formData })
+    .then(response => response.json())
+    .then(data => alert(data.message))
+    .catch(error => console.error("Error:", error));
+});
+
+</script>
 <!--Main js file Style--> 
 <script type="text/javascript" src="js/jquery.js"></script> 
 <script type="text/javascript" src="js/bootstrap.js"></script>
