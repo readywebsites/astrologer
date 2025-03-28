@@ -31,7 +31,40 @@ Purchase: http://themeforest.net/user/kamleshyadav
 <!-- Favicon Link -->
 <link rel="shortcut icon" type="image/png" href="images/header/favicon.png">
 <style>
-	
+	.ast_download_box ul {
+    display: flex;
+    justify-content: center; /* Center align buttons */
+    align-items: center;
+    gap: 20px; /* Add space between buttons */
+    padding: 0;
+    list-style: none;
+}
+
+.ast_download_box ul li {
+    margin: 0; /* Remove margin-left to prevent shifting */
+}
+
+.ast_download_box ul li a img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 576px) {
+    .ast_download_box ul {
+        flex-direction: row; /* Keep buttons in a row */
+        justify-content: center; /* Center them */
+    }
+
+    .ast_download_box ul li {
+        margin: 0; /* Ensure no extra margins */
+    }
+
+    .ast_download_box ul li a img {
+        width: 40px; /* Slightly smaller on smaller screens */
+    }
+}
+
 	/* 🔹 Modal Background */
 	.modal {
 		display: none; /* Initially hidden */
@@ -102,7 +135,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
 			<div class="col-lg-12 col-md-12 col-sm-12 col-12">
 				<div class="ast_contact_details">
 					<ul>
-						<li><i class="fa fa-phone" aria-hidden="true"></i> ++9924634401</li>
+						<li><i class="fa fa-phone" aria-hidden="true"></i> +9924634401</li>
 						<li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> ddharmendraachary48@gmail.com</a></li>
 					</ul>
 				</div>
@@ -269,12 +302,12 @@ Purchase: http://themeforest.net/user/kamleshyadav
 					<ul>
 						<li>
 							<a href="tel:+917984210153">
-								<img src="images/content/call us.svg" alt="Call Us" title="Call Us">
+								<img src="images/content/call us.png" alt="Call Us" title="Call Us">
 							</a>
 						</li>
 						<li>
 							<a href="https://wa.me/9924634401" target="_blank">
-								<img src="images/content/watsap_button.svg" alt="WhatsApp Us" title="WhatsApp Us">
+								<img src="images/content/watsap_button.png" alt="WhatsApp Us" title="WhatsApp Us">
 							</a>
 						</li>
 						

@@ -45,40 +45,6 @@ Assigned to: Themeforest
 -------------------------------------------------------------------*/
 /*--------- Body Strat -------*/
 
-.ast_download_box ul {
-    display: flex;
-    justify-content: center; /* Center align buttons */
-    align-items: center;
-    gap: 20px; /* Add space between buttons */
-    padding: 0;
-    list-style: none;
-}
-
-.ast_download_box ul li {
-    margin: 0; /* Remove margin-left to prevent shifting */
-}
-
-.ast_download_box ul li a img {
-    width: 50px; /* Adjust size as needed */
-    height: auto;
-}
-
-/* Adjust for smaller screens */
-@media (max-width: 576px) {
-    .ast_download_box ul {
-        flex-direction: row; /* Keep buttons in a row */
-        justify-content: center; /* Center them */
-    }
-
-    .ast_download_box ul li {
-        margin: 0; /* Ensure no extra margins */
-    }
-
-    .ast_download_box ul li a img {
-        width: 40px; /* Slightly smaller on smaller screens */
-    }
-}
-
 
 body {
 	font-family: 'Open Sans', sans-serif;
