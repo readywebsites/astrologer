@@ -5142,7 +5142,7 @@ li.ast_search , li.ast_cart{
 	background-image:linear-gradient(rgba(0,0,0,0.4) , rgba(0,0,0,0.4)) , url(https://dummyimage.com/1920x1080);
 }
 .ast_slider_wrapper.ast_index_vastu{
-	background-image:linear-gradient(rgba(0,0,0,0.6) , rgba(0,0,0,0.6)) , url('../images/content/1920950.jpg');
+	background-image:linear-gradient(rgba(0,0,0,0.6) , rgba(0,0,0,0.6)) , url('../images/content/1920950.png');
     background-size: cover;
 
 }
